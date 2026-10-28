@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F7FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📋 Ekran Görüntüsü -> Ctrl+V"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A202C"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huawei Tablet için Otomatik Pano Kopyalayıcı"
+            android:textSize="15sp"
+            android:textColor="#4A5568"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Durum Kartı -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFFFF"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvServiceStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Durum: Kontrol ediliyor..."
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2D3748" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Parmak ekleminizle (knuckle) ekran görüntüsü aldığınız anda görsel otomatik olarak panoya kopyalanır. Klavyenizden doğrudan Ctrl + V yaparak istediğiniz uygulamaya (Notlar, Word, WhatsApp, Tarayıcı vb.) yapıştırabilirsiniz."
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#4A5568" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchToast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:checked="true"
+                    android:text="Kopyalandığında ekranda ufak bildirim (Toast) göster"
+                    android:textColor="#2D3748"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <Button
+                        android:id="@+id/btnToggleService"
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        android:text="Servisi Başlat"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Huawei Pil Optimizasyonu Kartı -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#FFFBEB"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ Huawei / HarmonyOS Kesintisiz Çalışma Ayarı"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#92400E" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Huawei tabletler arka plandaki uygulamaları pil tasarrufu için kapatabilir. Kesintisiz çalışması için:\n1. Aşağıdaki butona basıp Pil Optimizasyonunu kapatın.\n2. Tablet Ayarları -> Pil -> Uygulama Başlatma (App Launch) menüsünden bu uygulamayı bulup 'Manuel olarak yönet' (Üç seçeneği de açık) yapın."
+                    android:textSize="13.5sp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#78350F" />
+
+                <Button
+                    android:id="@+id/btnBatteryOptimization"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Pil Kısıtlamasını Kaldır" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
